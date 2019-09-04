@@ -15,6 +15,8 @@ project(PENF VERSION 1.2.1 LANGUAGES Fortran)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake/Modules)
 
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 # set export variables needed for building
 set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
 set(NAMESPACE "${PROJECT_NAME}::")
