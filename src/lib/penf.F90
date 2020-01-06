@@ -16,10 +16,10 @@ save
 ! global parameters and variables
 public :: endianL, endianB, endian, is_initialized
 public :: ASCII, UCS4, CK
-public :: R16P, FR16P, DR16P, MinR16P, MaxR16P, BIR16P, BYR16P, smallR16P, ZeroR16P
-public :: R8P,  FR8P,  DR8P,  MinR8P,  MaxR8P,  BIR8P,  BYR8P,  smallR8P,  ZeroR8P
-public :: R4P,  FR4P,  DR4P,  MinR4P,  MaxR4P,  BIR4P,  BYR4P,  smallR4P,  ZeroR4P
-public :: R_P,  FR_P,  DR_P,  MinR_P,  MaxR_P,  BIR_P,  BYR_P,  smallR_P,  ZeroR_P
+public :: R16P, FR16P, DR16P, MinR16P, MaxR16P, BIR16P, BYR16P, smallR16P!, ZeroR16P
+public :: R8P,  FR8P,  DR8P,  MinR8P,  MaxR8P,  BIR8P,  BYR8P,  smallR8P!,  ZeroR8P
+public :: R4P,  FR4P,  DR4P,  MinR4P,  MaxR4P,  BIR4P,  BYR4P,  smallR4P!,  ZeroR4P
+public :: R_P,  FR_P,  DR_P,  MinR_P,  MaxR_P,  BIR_P,  BYR_P,  smallR_P!,  ZeroR_P
 public :: I8P,  FI8P,  DI8P,  MinI8P,  MaxI8P,  BII8P,  BYI8P
 public :: I4P,  FI4P,  DI4P,  MinI4P,  MaxI4P,  BII4P,  BYI4P
 public :: I2P,  FI2P,  DI2P,  MinI2P,  MaxI2P,  BII2P,  BYI2P
@@ -167,11 +167,11 @@ contains
    write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  smallR8P:  '//str(smallR8P,  .true.)
    write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  smallR4P:  '//str(smallR4P,  .true.)
    write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  smallR_P:  '//str(smallR_P,  .true.)
-   write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'Machine zero'
-   write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR16P: '//str(ZeroR16P, .true.)
-   write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR8P:  '//str(ZeroR8P,  .true.)
-   write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR4P:  '//str(ZeroR4P,  .true.)
-   write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR_P:  '//str(ZeroR_P,  .true.)
+   !write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'Machine zero'
+   !write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR16P: '//str(ZeroR16P, .true.)
+   !write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR8P:  '//str(ZeroR8P,  .true.)
+   !write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR4P:  '//str(ZeroR4P,  .true.)
+   !write(unit=unit,fmt='(A)',iostat=iostatd,iomsg=iomsgd)  prefd//'  ZeroR_P:  '//str(ZeroR_P,  .true.)
    if (present(iostat)) iostat = iostatd
    if (present(iomsg))  iomsg  = iomsgd
    endsubroutine penf_print
