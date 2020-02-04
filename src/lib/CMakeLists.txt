@@ -16,6 +16,8 @@ add_library(${LIB}
 add_library(${NAMESPACE}${LIB} ALIAS ${LIB})
 
 target_include_directories(${LIB}
+    PRIVATE
+        $<BUILD_INTERFACE:${CMAKE_Fortran_MODULE_DIRECTORY}>
     INTERFACE
         $<BUILD_INTERFACE:${CMAKE_Fortran_MODULE_DIRECTORY}>
 )

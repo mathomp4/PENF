@@ -1212,6 +1212,7 @@ contains
    if (present(error)) error = err
    endfunction ctoi_I1P
 
+#ifdef _R16P_SUPPORTED
    elemental function bstr_R16P(n) result(bstr)
    !< Convert real to string of bits.
    !<
@@ -1231,6 +1232,7 @@ contains
    buffer = transfer(n, buffer)
    write(bstr, '(16B8.8)') buffer
    endfunction bstr_R16P
+#endif
 
    elemental function bstr_R8P(n) result(bstr)
    !< Convert real to string of bits.
